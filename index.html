@@ -3,18 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <title>Góc Tin học cô Hiếu</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #eaf4f4;
+        }
+
+        /* Khung chính */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background: white;
+            border: 2px solid #2196f3;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        /* Phần đầu trang */
+        header {
+            background: #2196f3;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        /* Thanh menu */
+        nav {
+            background: #1565c0;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+        }
+
+        /* Nội dung */
+        main {
+            padding: 30px;
+            min-height: 400px;
+        }
+
+        /* Các ô sản phẩm */
+        .sanpham {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            flex: 1;
+            min-width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .box:hover {
+            box-shadow: 0 4px 10px #aaa;
+        }
+
+        /* Chân trang */
+        footer {
+            background: #eeeeee;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>🌸 GÓC TIN HỌC CÔ HIẾU</h1>
 
-    <h2>🎮 Game Scratch</h2>
-    <p>🍎 Game Hái táo</p>
+    <div class="container">
 
-    <h2>🤖 STEM - Arduino</h2>
-    <p>🚦 Các sản phẩm Arduino</p>
+        <header>
+            <h1>🌸 GÓC TIN HỌC CÔ HIẾU</h1>
+            <p>Khám phá - Sáng tạo - Công nghệ</p>
+        </header>
 
-    <h2>💻 Sản phẩm học sinh</h2>
-    <p>Đang cập nhật...</p>
+        <nav>
+            <a href="#">Trang chủ</a>
+            <a href="#">Scratch</a>
+            <a href="#">Arduino</a>
+            <a href="#">Sản phẩm học sinh</a>
+        </nav>
+
+        <main>
+
+            <h2>🎮 Sản phẩm Tin học</h2>
+
+            <div class="sanpham">
+
+                <div class="box">
+                    <h3>🍎 Game Hái táo</h3>
+                    <p>Game Scratch</p>
+                </div>
+
+                <div class="box">
+                    <h3>🚦 Arduino</h3>
+                    <p>Sản phẩm STEM</p>
+                </div>
+
+                <div class="box">
+                    <h3>💻 Sản phẩm học sinh</h3>
+                    <p>Đang cập nhật...</p>
+                </div>
+
+            </div>
+
+        </main>
+
+        <footer>
+            © 2026 Góc Tin học cô Hiếu
+        </footer>
+
+    </div>
+
 </body>
 </html>
