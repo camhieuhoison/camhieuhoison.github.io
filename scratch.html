@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Scratch - Góc Tin học cô Hiếu</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #eaf4ff;
+            color: #1e293b;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           THANH MENU
+        ========================= */
+
+        nav {
+            background: #075985;
+            padding: 18px 5%;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px 18px;
+            border-radius: 30px;
+        }
+
+        nav a:hover {
+            background: #0284c7;
+        }
+
+        /* =========================
+           TIÊU ĐỀ
+        ========================= */
+
+        .header-section {
+            text-align: center;
+            padding: 65px 20px 40px;
+        }
+
+        .header-icon {
+            font-size: 65px;
+            margin-bottom: 10px;
+        }
+
+        .header-section h1 {
+            margin: 0;
+            font-size: 48px;
+            color: #075985;
+        }
+
+        .header-section p {
+            font-size: 24px;
+            margin-top: 20px;
+            color: #334155;
+        }
+
+        /* =========================
+           KHUNG NỘI DUNG
+        ========================= */
+
+        .content-box {
+            width: 82%;
+            max-width: 1200px;
+            margin: 20px auto 60px;
+            background: white;
+            padding: 45px;
+            border-radius: 30px;
+            border-left: 8px solid #0284c7;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .content-box h2 {
+            color: #075985;
+            font-size: 32px;
+            margin-top: 0;
+        }
+
+        .intro-box {
+            background: #f0f9ff;
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 35px;
+            border: 1px solid #bae6fd;
+        }
+
+        .intro-box p {
+            font-size: 18px;
+        }
+
+        /* =========================
+           MỤC LỤC
+        ========================= */
+
+        .toc {
+            background: #f8fafc;
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+        }
+
+        .toc h3 {
+            color: #075985;
+            margin-top: 0;
+        }
+
+        .toc a {
+            display: block;
+            color: #0369a1;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 0;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        /* =========================
+           NHÓM KHỐI LỆNH
+        ========================= */
+
+        .command-section {
+            margin-top: 45px;
+            scroll-margin-top: 20px;
+        }
+
+        .command-section h2 {
+            background: #075985;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 15px;
+            font-size: 27px;
+        }
+
+        .command-card {
+            background: #f8fbff;
+            border: 1px solid #dbeafe;
+            border-radius: 18px;
+            padding: 20px;
+            margin: 18px 0;
+        }
+
+        .command-card h3 {
+            color: #075985;
+            margin-top: 0;
+            font-size: 21px;
+        }
+
+        .block {
+            display: inline-block;
+            background: #e0f2fe;
+            border-left: 6px solid #0284c7;
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            color: #0c4a6e;
+            margin: 5px 0 10px;
+        }
+
+        .example {
+            background: white;
+            border-left: 4px solid #38bdf8;
+            padding: 12px 18px;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+
+        .example strong {
+            color: #075985;
+        }
+
+        /* =========================
+           BẢNG TRA CỨU
+        ========================= */
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #cbd5e1;
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #075985;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        /* =========================
+           GHI NHỚ
+        ========================= */
+
+        .note {
+            background: #fff7ed;
+            border-left: 6px solid #f97316;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+
+        .success {
+            background: #f0fdf4;
+            border-left: 6px solid #22c55e;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+
+        /* =========================
+           CHÂN TRANG
+        ========================= */
+
+        footer {
+            text-align: center;
+            background: #075985;
+            color: white;
+            padding: 30px 20px;
+            font-size: 18px;
+        }
+
+        /* =========================
+           ĐIỆN THOẠI
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            nav {
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 16px;
+                padding: 8px 12px;
+            }
+
+            .header-section h1 {
+                font-size: 34px;
+            }
+
+            .header-section p {
+                font-size: 20px;
+            }
+
+            .content-box {
+                width: 92%;
+                padding: 25px;
+            }
+
+            .content-box h2 {
+                font-size: 26px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         THANH MENU
+    ========================= -->
+
+    <nav>
+
+        <a href="index.html">🏠 Trang chủ</a>
+
+        <a href="scratch.html">🎮 Scratch</a>
+
+        <a href="#">🤖 Arduino</a>
+
+        <a href="#">📁 Sản phẩm học sinh</a>
+
+        <a href="sanphamminhhoa.html">💡 Sản phẩm minh họa</a>
+
+        <a href="#">📚 Kho học liệu</a>
+
+        <a href="gioithieu.html">👩‍🏫 Giới thiệu</a>
+
+    </nav>
+
+
+    <!-- =========================
+         TIÊU ĐỀ
+    ========================= -->
+
+    <section class="header-section">
+
+        <div class="header-icon">🎮</div>
+
+        <h1>KHÁM PHÁ SCRATCH</h1>
+
+        <p>
+            Học lập trình trực quan – Tư duy sáng tạo – Tạo sản phẩm
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         NỘI DUNG
+    ========================= -->
+
+    <div class="content-box">
+
+
+        <!-- GIỚI THIỆU -->
+
+        <div class="intro-box">
+
+            <h2>🎯 Scratch là gì?</h2>
+
+            <p>
+                Scratch là môi trường lập trình trực quan,
+                cho phép người học tạo chương trình bằng cách
+                kéo và ghép các khối lệnh thay vì phải viết
+                nhiều câu lệnh bằng bàn phím.
+            </p>
+
+            <p>
+                Scratch rất phù hợp với học sinh vì giúp các em
+                phát triển tư duy logic, khả năng giải quyết vấn đề,
+                tính sáng tạo và kỹ năng xây dựng sản phẩm số.
+            </p>
+
+        </div>
+
+
+        <!-- MỤC LỤC -->
+
+        <div class="toc">
+
+            <h3>📚 Nội dung tra cứu</h3>
+
+            <a href="#chuyen-dong">1. 🟦 Nhóm Chuyển động</a>
+
+            <a href="#hien-thi">2. 🟣 Nhóm Hiển thị</a>
+
+            <a href="#am-thanh">3. 🔊 Nhóm Âm thanh</a>
+
+            <a href="#su-kien">4. 🟡 Nhóm Sự kiện</a>
+
+            <a href="#dieu-khien">5. 🟠 Nhóm Điều khiển</a>
+
+            <a href="#cam-bien">6. 🔵 Nhóm Cảm biến</a>
+
+            <a href="#toan-tu">7. 🟢 Nhóm Toán tử</a>
+
+            <a href="#bien">8. 🟠 Nhóm Biến</a>
+
+            <a href="#khoi-cua-toi">9. 🟣 Khối của tôi</a>
+
+            <a href="#quy-trinh">10. 🚀 Quy trình tạo sản phẩm</a>
+
+        </div>
+
+
+        <!-- =========================
+             CHUYỂN ĐỘNG
+        ========================= -->
+
+        <section class="command-section" id="chuyen-dong">
+
+            <h2>🟦 1. Nhóm Chuyển động</h2>
+
+            <div class="command-card">
+
+                <h3>Di chuyển</h3>
+
+                <div class="block">
+                    di chuyển 10 bước
+                </div>
+
+                <p>
+                    Làm cho nhân vật di chuyển theo hướng hiện tại
+                    một số bước xác định.
+                </p>
+
+                <div class="example">
+                    <strong>Ví dụ:</strong>
+                    Dùng để làm nhân vật đi về phía trước.
+                </div>
+
+            </div>
+
+
+            <div class="command-card">
+
+                <h3>Xoay</h3>
+
+                <div class="block">
+                    xoay 15 độ
+                </div>
+
+                <p>
+                    Làm nhân vật quay sang trái hoặc phải
+                    theo số độ được chỉ định.
+                </p>
+
+                <div class="example">
+                    <strong>Ví dụ:</strong>
+                    Dùng để làm nhân vật quay khi điều khiển.
+                </div>
+
+            </div>
+
+
+            <div class="command-card">
+
+                <h3>Đi tới vị trí</h3>
+
+                <div class="block">
+                    đi tới x: ... y: ...
+                </div>
+
+                <p>
+                    Đưa nhân vật đến một tọa độ xác định
+                    trên sân khấu Scratch.
+                </p>
+
+                <div class="example">
+                    <strong>Ví dụ:</strong>
+                    Đặt nhân vật về vị trí ban đầu của trò chơi.
+                </div>
+
+            </div>
+
+
+            <div class="command-card">
+
+                <h3>Thay đổi tọa độ</h3>
+
+                <div class="block">
+                    thay đổi x một lượng 10
+                </div>
+
+                <p>
+                    Thay đổi vị trí theo chiều ngang.
+                </p>
+
+                <div class="block">
+                    thay đổi y một lượng 10
+                </div>
+
+                <p>
+                    Thay đổi vị trí theo chiều dọc.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             HIỂN THỊ
+        ========================= -->
+
+        <section class="command-section" id="hien-thi">
+
+            <h2>🟣 2. Nhóm Hiển thị</h2>
+
+            <div class="command-card">
+
+                <h3>Nói</h3>
+
+                <div class="block">
+                    nói Xin chào! trong 2 giây
+                </div>
+
+                <p>
+                    Cho nhân vật hiển thị lời thoại trên sân khấu.
+                </p>
+
+            </div>
+
+
+            <div class="command-card">
+
+                <h3>Hiện và ẩn nhân vật</h3>
+
+                <div class="block">
+                    hiện
+                </div>
+
+                <div class="block">
+                    ẩn
+                </div>
+
+                <p>
+                    Điều khiển việc nhân vật có xuất hiện
+                    trên sân khấu hay không.
+                </p>
+
+            </div>
+
+
+            <div class="command-card">
+
+                <h3>Đổi trang phục</h3>
+
+                <div class="block">
+                    chuyển sang trang phục tiếp theo
+                </div>
+
+                <p>
+                    Thay đổi hình ảnh của nhân vật.
+                    Có thể sử dụng để tạo hiệu ứng chuyển động.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ÂM THANH
+        ========================= -->
+
+        <section class="command-section" id="am-thanh">
+
+            <h2>🔊 3. Nhóm Âm thanh</h2>
+
+            <div class="command-card">
+
+                <h3>Phát âm thanh</h3>
+
+                <div class="block">
+                    bắt đầu âm thanh
+                </div>
+
+                <p>
+                    Phát âm thanh nhưng chương trình vẫn tiếp tục
+                    thực hiện các lệnh tiếp theo.
+                </p>
+
+            </div>
+
+
+            <div class="command-card">
+
+                <h3>Phát âm thanh và chờ</h3>
+
+                <div class="block">
+                    phát âm thanh ... cho đến hết
+                </div>
+
+                <p>
+                    Phát âm thanh và chờ cho đến khi âm thanh
+                    kết thúc rồi mới thực hiện lệnh tiếp theo.
+                </p>
+
+            </div>
+
+
+            <div class="command-card">
+
+                <h3>Thay đổi âm lượng</h3>
+
+                <div class="block">
+                    đặt âm lượng thành 100%
+                </div>
+
+                <p>
+                    Điều chỉnh âm lượng âm thanh của nhân vật.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SỰ KIỆN
+        ========================= -->
+
+        <section class="command-section" id="su-kien">
+
+            <h2>🟡 4. Nhóm Sự kiện</h2>
+
+            <div class="command-card">
+
+                <h3>Khi bấm cờ xanh</h3>
+
+                <div class="block">
+                    khi bấm vào cờ xanh
+                </div>
+
+                <p>
+                    Đây là một trong những khối lệnh quan trọng nhất.
+                    Chương trình bắt đầu thực hiện khi người dùng
+                    bấm vào cờ xanh.
+                </p>
+
+                <div class="example">
+                    <strong>Ví dụ:</strong>
+                    Dùng để khởi động Game Hái táo.
+                </div>
+
+            </div>
+
+
+            <div class="command-card">
+
+                <h3>Khi nhấn phím</h3>
+
+                <div class="block">
+                    khi phím Space được nhấn
+                </div>
+
+                <p>
+                    Chương trình thực hiện lệnh khi người dùng
+                    nhấn một phím trên bàn phím.
+                </p>
+
+            </div>
+
+
+            <div class="command-card">
+
+                <h3>Khi nhận tin nhắn</h3>
+
+                <div class="block">
+                    khi tôi nhận tin nhắn ...
+                </div>
+
+                <p>
+                    Cho phép các nhân vật giao tiếp với nhau
+                    thông qua thông điệp.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ĐIỀU KHIỂN
+        ========================= -->
+
+        <section class="command-section" id="dieu-khien">
+
+            <h2>🟠 5. Nhóm Điều khiển</h2>
+
+            <div class="command-card">
+
+                <h3>Chờ</h3>
+
+                <div class="block">
+                    đợi 1 giây
+                </div>
+
+                <p>
+                    Tạm dừng chương trình trong một khoảng thời gian.
+                </p>
+
+            </div>
+
+
+            <div class="command-card">
+
+                <h3>Lặp lại</h3>
+
+                <div class="block">
+                    lặp lại 10 lần
+                </div>
+
+                <p>
+                    Thực hiện một nhóm lệnh nhiều lần theo
+                    số lần xác định.
+                </p>
+
+            </div>
+
+
+            <div class="command-card">
+
+                <h3>Lặp lại mãi mãi</h3>
+
+                <div class="block">
+                    mãi mãi
+                </div>
+
+                <p>
+                    Liên tục thực hiện các lệnh bên trong.
+                    Đây là khối rất quan trọng khi tạo game.
+                </p>
+
+                <div class="example">
+                    <strong>Ví dụ:</strong>
+                    Cho táo liên tục rơi từ trên xuống.
+                </div>
+
+            </div>
+
+
+            <div class="command-card">
+
+                <h3>Nếu ... thì</h3>
+
+                <div class="block">
+                    nếu &lt;điều kiện&gt; thì
+                </div>
+
+                <p>
+                    Kiểm tra một điều kiện.
+                    Nếu điều kiện đúng thì thực hiện các lệnh bên trong.
+                </p>
+
+            </div>
+
+
+            <div class="command-card">
+
+                <h3>Nếu ... thì ... nếu không</h3>
+
+                <div class="block">
+                    nếu &lt;điều kiện&gt; thì ... nếu không ...
+                </div>
+
+                <p>
+                    Cho phép chương trình lựa chọn giữa hai trường hợp:
+                    điều kiện đúng hoặc điều kiện sai.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CẢM BIẾN
+        ========================= -->
+
+        <section class="command-section" id="cam-bien">
+
+            <h2>🔵 6. Nhóm Cảm biến</h2>
+
+            <div class="command-card">
+
+                <h3>Chạm vào</h3>
+
+                <div class="block">
+                    đang chạm vào ...?
+                </div>
+
+                <p>
+                    Kiểm tra xem nhân vật có chạm vào đối tượng,
+                    cạnh sân khấu hoặc con trỏ chuột hay không.
+                </p>
+
+                <div class="example">
+                    <strong>Ví dụ:</strong>
+                    Kiểm tra xem quả táo có chạm vào giỏ hay không.
+                </div>
+
+            </div>
+
+
+            <div class="command-card">
+
+                <h3>Hỏi và chờ</h3>
+
+                <div class="block">
+                    hỏi ... và đợi
+                </div>
+
+                <p>
+                    Hiển thị câu hỏi và chờ người dùng nhập câu trả lời.
+                </p>
+
+            </div>
+
+
+            <div class="command-card">
+
+                <h3>Khoảng cách tới</h3>
+
+                <div class="block">
+                    khoảng cách tới ...
+                </div>
+
+                <p>
+                    Cho biết khoảng cách giữa nhân vật và
+                    một đối tượng khác.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             TOÁN TỬ
+        ========================= -->
+
+        <section class="command-section" id="toan-tu">
+
+            <h2>🟢 7. Nhóm Toán tử</h2>
+
+            <div class="command-card">
+
+                <h3>Phép tính</h3>
+
+                <div class="block">
+                    (5 + 3)
+                </div>
+
+                <p>
+                    Thực hiện các phép cộng, trừ, nhân và chia.
+                </p>
+
+            </div>
+
+
+            <div class="command-card">
+
+                <h3>So sánh</h3>
+
+                <div class="block">
+                    &lt; &nbsp;&nbsp; = &nbsp;&nbsp; &gt;
+                </div>
+
+                <p>
+                    So sánh hai giá trị để tạo điều kiện
+                    cho chương trình.
+                </p>
+
+                <div class="example">
+                    <strong>Ví dụ:</strong>
+                    Nếu điểm &gt; 30 thì người chơi thắng.
+                </div>
+
+            </div>
+
+
+            <div class="command-card">
+
+                <h3>Và / Hoặc / Không</h3>
+
+                <div class="block">
+                    &lt;điều kiện 1&gt; và &lt;điều kiện 2&gt;
+                </div>
+
+                <p>
+                    Kết hợp nhiều điều kiện trong cùng một chương trình.
+                </p>
+
+            </div>
+
+
+            <div class="command-card">
+
+                <h3>Số ngẫu nhiên</h3>
+
+                <div class="block">
+                    lấy ngẫu nhiên từ 1 đến 10
+                </div>
+
+                <p>
+                    Tạo ra một giá trị ngẫu nhiên trong khoảng xác định.
+                </p>
+
+                <div class="example">
+                    <strong>Ví dụ:</strong>
+                    Cho quả táo xuất hiện ở vị trí X ngẫu nhiên.
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             BIẾN
+        ========================= -->
+
+        <section class="command-section" id="bien">
+
+            <h2>🟠 8. Nhóm Biến</h2>
+
+            <div class="command-card">
+
+                <h3>Tạo biến</h3>
+
+                <p>
+                    Biến dùng để lưu trữ dữ liệu trong chương trình.
+                </p>
+
+                <div class="example">
+                    <strong>Ví dụ:</strong>
+                    Tạo biến <b>Điểm</b> để lưu điểm của người chơi.
+                </div>
+
+            </div>
+
+
+            <div class="command-card">
+
+                <h3>Đặt biến</h3>
+
+                <div class="block">
+                    đặt Điểm thành 0
+                </div>
+
+                <p>
+                    Gán một giá trị mới cho biến.
+                </p>
+
+            </div>
+
+
+            <div class="command-card">
+
+                <h3>Thay đổi biến</h3>
+
+                <div class="block">
+                    thay đổi Điểm một lượng 1
+                </div>
+
+                <p>
+                    Tăng hoặc giảm giá trị của biến.
+                </p>
+
+                <div class="example">
+                    <strong>Ví dụ:</strong>
+                    Khi hái được một quả táo:
+                    Điểm tăng thêm 1.
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             KHỐI CỦA TÔI
+        ========================= -->
+
+        <section class="command-section" id="khoi-cua-toi">
+
+            <h2>🟣 9. Khối của tôi</h2>
+
+            <div class="command-card">
+
+                <h3>Tạo khối lệnh riêng</h3>
+
+                <p>
+                    Khối của tôi cho phép người lập trình
+                    tạo một nhóm lệnh riêng để sử dụng nhiều lần.
+                </p>
+
+                <div class="example">
+                    <strong>Ví dụ:</strong>
+                    Có thể tạo khối
+                    <b>Khởi tạo trò chơi</b>
+                    để thực hiện các bước chuẩn bị ban đầu.
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             BẢNG TỔNG HỢP
+        ========================= -->
+
+        <section class="command-section">
+
+            <h2>📋 10. Bảng tra cứu nhanh</h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <tr>
+                        <th>Nhóm</th>
+                        <th>Chức năng chính</th>
+                        <th>Thường dùng để</th>
+                    </tr>
+
+                    <tr>
+                        <td>🟦 Chuyển động</td>
+                        <td>Điều khiển vị trí, hướng</td>
+                        <td>Di chuyển nhân vật</td>
+                    </tr>
+
+                    <tr>
+                        <td>🟣 Hiển thị</td>
+                        <td>Điều khiển hình ảnh, lời thoại</td>
+                        <td>Nhân vật, hiệu ứng</td>
+                    </tr>
+
+                    <tr>
+                        <td>🔊 Âm thanh</td>
+                        <td>Điều khiển âm thanh</td>
+                        <td>Nhạc, hiệu ứng</td>
+                    </tr>
+
+                    <tr>
+                        <td>🟡 Sự kiện</td>
+                        <td>Khởi động chương trình</td>
+                        <td>Cờ xanh, phím, tin nhắn</td>
+                    </tr>
+
+                    <tr>
+                        <td>🟠 Điều khiển</td>
+                        <td>Lặp, điều kiện, chờ</td>
+                        <td>Logic chương trình</td>
+                    </tr>
+
+                    <tr>
+                        <td>🔵 Cảm biến</td>
+                        <td>Nhận biết môi trường</td>
+                        <td>Va chạm, chuột, bàn phím</td>
+                    </tr>
+
+                    <tr>
+                        <td>🟢 Toán tử</td>
+                        <td>Tính toán và so sánh</td>
+                        <td>Điểm, điều kiện, ngẫu nhiên</td>
+                    </tr>
+
+                    <tr>
+                        <td>🟠 Biến</td>
+                        <td>Lưu trữ dữ liệu</td>
+                        <td>Điểm, thời gian, số lượng</td>
+                    </tr>
+
+                    <tr>
+                        <td>🟣 Khối của tôi</td>
+                        <td>Tạo lệnh riêng</td>
+                        <td>Tái sử dụng chương trình</td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             QUY TRÌNH
+        ========================= -->
+
+        <section class="command-section" id="quy-trinh">
+
+            <h2>🚀 11. Quy trình tạo một sản phẩm Scratch</h2>
+
+            <div class="success">
+
+                <p>
+                    <strong>Bước 1:</strong>
+                    Xác định ý tưởng.
+                </p>
+
+                <p>
+                    <strong>Bước 2:</strong>
+                    Xác định nhân vật và sân khấu.
+                </p>
+
+                <p>
+                    <strong>Bước 3:</strong>
+                    Xác định các sự kiện.
+                </p>
+
+                <p>
+                    <strong>Bước 4:</strong>
+                    Lập trình chuyển động và tương tác.
+                </p>
+
+                <p>
+                    <strong>Bước 5:</strong>
+                    Sử dụng điều kiện và vòng lặp.
+                </p>
+
+                <p>
+                    <strong>Bước 6:</strong>
+                    Tạo biến nếu cần tính điểm, thời gian...
+                </p>
+
+                <p>
+                    <strong>Bước 7:</strong>
+                    Thêm âm thanh và hiệu ứng.
+                </p>
+
+                <p>
+                    <strong>Bước 8:</strong>
+                    Chạy thử và tìm lỗi.
+                </p>
+
+                <p>
+                    <strong>Bước 9:</strong>
+                    Hoàn thiện và chia sẻ sản phẩm.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <div class="note">
+
+            💡 <strong>Gợi ý cho các em:</strong>
+
+            Không cần nhớ tất cả khối lệnh ngay từ đầu.
+            Hãy bắt đầu bằng một ý tưởng nhỏ, thử từng khối lệnh,
+            quan sát kết quả và sửa chương trình khi có lỗi.
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =========================
+         CHÂN TRANG
+    ========================= -->
+
+    <footer>
+
+        🌟 Góc Tin học cô Hiếu
+
+        <br>
+
+        Học Tin học hôm nay –
+        Kiến tạo tương lai ngày mai.
+
+    </footer>
+
+
+</body>
+
+</html>
