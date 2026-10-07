@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sản phẩm minh họa - Góc Tin học cô Hiếu</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #eaf4ff;
+            color: #1e293b;
+        }
+
+        /* =========================
+           THANH MENU
+        ========================= */
+
+        nav {
+            background: #075985;
+            padding: 18px 5%;
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px 18px;
+            border-radius: 30px;
+        }
+
+        nav a:hover {
+            background: #0284c7;
+        }
+
+        /* =========================
+           TIÊU ĐỀ
+        ========================= */
+
+        .header-section {
+            text-align: center;
+            padding: 65px 20px 40px;
+        }
+
+        .header-icon {
+            font-size: 65px;
+            margin-bottom: 10px;
+        }
+
+        .header-section h1 {
+            margin: 0;
+            font-size: 48px;
+            color: #075985;
+        }
+
+        .header-section p {
+            font-size: 24px;
+            margin-top: 25px;
+            color: #334155;
+        }
+
+        /* =========================
+           KHUNG NỘI DUNG
+        ========================= */
+
+        .content-box {
+            width: 80%;
+            max-width: 1200px;
+            margin: 20px auto 60px;
+            background: white;
+            padding: 45px;
+            border-radius: 30px;
+            border-left: 8px solid #0284c7;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .content-box h2 {
+            color: #075985;
+            font-size: 32px;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+
+        /* =========================
+           SẢN PHẨM
+        ========================= */
+
+        .product-card {
+            background: #f8fbff;
+            border-radius: 25px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid #dbeafe;
+            text-align: center;
+        }
+
+        .product-icon {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+
+        .product-card h3 {
+            color: #075985;
+            font-size: 30px;
+            margin: 10px 0 15px;
+        }
+
+        .product-card p {
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto 25px;
+        }
+
+        /* =========================
+           GAME SCRATCH
+        ========================= */
+
+        .game-box {
+            display: flex;
+            justify-content: center;
+            margin: 25px auto;
+        }
+
+        .game-box iframe {
+            max-width: 100%;
+            border: none;
+            border-radius: 15px;
+        }
+
+        .scratch-button {
+            display: inline-block;
+            background: #0284c7;
+            color: white;
+            text-decoration: none;
+            padding: 13px 25px;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .scratch-button:hover {
+            background: #0369a1;
+        }
+
+        /* =========================
+           KHU VỰC SẢN PHẨM SAU NÀY
+        ========================= */
+
+        .coming-soon {
+            border: 2px dashed #93c5fd;
+            background: #eff6ff;
+        }
+
+        .coming-soon p {
+            margin-bottom: 0;
+        }
+
+        /* =========================
+           CHÂN TRANG
+        ========================= */
+
+        footer {
+            text-align: center;
+            background: #075985;
+            color: white;
+            padding: 30px 20px;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* =========================
+           ĐIỆN THOẠI
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            nav {
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 16px;
+                padding: 8px 12px;
+            }
+
+            .header-section h1 {
+                font-size: 34px;
+            }
+
+            .header-section p {
+                font-size: 20px;
+            }
+
+            .content-box {
+                width: 92%;
+                padding: 25px;
+            }
+
+            .content-box h2 {
+                font-size: 26px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- =========================
+         THANH MENU
+    ========================= -->
+
+    <nav>
+
+        <a href="index.html">🏠 Trang chủ</a>
+
+        <a href="#">🎮 Scratch</a>
+
+        <a href="#">🤖 Arduino</a>
+
+        <a href="#">📁 Sản phẩm học sinh</a>
+
+        <a href="sanphamminhhoa.html">💡 Sản phẩm minh họa</a>
+
+        <a href="#">📚 Kho học liệu</a>
+
+        <a href="gioithieu.html">👩‍🏫 Giới thiệu</a>
+
+    </nav>
+
+
+    <!-- =========================
+         TIÊU ĐỀ
+    ========================= -->
+
+    <section class="header-section">
+
+        <div class="header-icon">💡</div>
+
+        <h1>SẢN PHẨM MINH HỌA</h1>
+
+        <p>Góc Tin học cô Hiếu</p>
+
+    </section>
+
+
+    <!-- =========================
+         NỘI DUNG
+    ========================= -->
+
+    <div class="content-box">
+
+        <h2>🎮 Các sản phẩm Tin học</h2>
+
+
+        <!-- =========================
+             GAME HÁI TÁO
+        ========================= -->
+
+        <div class="product-card">
+
+            <div class="product-icon">🍎</div>
+
+            <h3>Game Hái Táo</h3>
+
+            <p>
+                Trò chơi được xây dựng bằng Scratch,
+                giúp học sinh làm quen với lập trình trực quan,
+                điều khiển nhân vật, xử lý sự kiện,
+                tính điểm và xây dựng trò chơi.
+            </p>
+
+
+            <div class="game-box">
+
+                <iframe
+                    src="https://scratch.mit.edu/projects/1388058310/embed"
+                    width="485"
+                    height="402"
+                    allowtransparency="true"
+                    frameborder="0"
+                    scrolling="no"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+
+            <a
+                class="scratch-button"
+                href="https://scratch.mit.edu/projects/1388058310/"
+                target="_blank">
+
+                🎮 Mở game trên Scratch
+
+            </a>
+
+        </div>
+
+
+        <!-- =========================
+             PING PONG - SẼ THÊM SAU
+        ========================= -->
+
+        <div class="product-card coming-soon">
+
+            <div class="product-icon">🏓</div>
+
+            <h3>Game Ping Pong</h3>
+
+            <p>
+                Sản phẩm đang được phát triển.
+                Sau khi hoàn thiện, game Ping Pong sẽ được
+                cập nhật tại đây.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =========================
+         CHÂN TRANG
+    ========================= -->
+
+    <footer>
+
+        🌟 Góc Tin học cô Hiếu
+
+        <br>
+
+        Học Tin học hôm nay –
+        Kiến tạo tương lai ngày mai.
+
+    </footer>
+
+
+</body>
+
+</html>
