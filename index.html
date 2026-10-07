@@ -84,6 +84,547 @@
             text-align: center;
             padding: 20px;
         }
+        /* =================================
+   TRANG CHỦ - TIN HỌC CÔ HIẾU
+================================= */
+
+.home-page {
+    max-width: 1200px;
+    margin: auto;
+    color: #172554;
+}
+
+/* ===== PHẦN GIỚI THIỆU ===== */
+
+.hero {
+    min-height: 430px;
+    padding: 50px;
+    margin-bottom: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 28px;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            #60a5fa 0,
+            transparent 28%
+        ),
+        linear-gradient(
+            135deg,
+            #0f4cce,
+            #2563eb 55%,
+            #06b6d4
+        );
+
+    color: white;
+    overflow: hidden;
+}
+
+.hero-text {
+    width: 58%;
+}
+
+.hero-label {
+    display: inline-block;
+
+    padding: 10px 18px;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.18);
+
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.1;
+
+    margin: 25px 0 20px;
+}
+
+.hero h1 span {
+    color: #fde047;
+}
+
+.hero p {
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+.hero-button {
+    display: inline-block;
+
+    margin-top: 15px;
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    background: white;
+    color: #1d4ed8;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.hero-button:hover {
+    transform: translateY(-3px);
+}
+
+
+/* ===== HÌNH MINH HỌA ===== */
+
+.hero-visual {
+    width: 38%;
+    height: 330px;
+
+    position: relative;
+}
+
+.tech-circle {
+    position: absolute;
+
+    width: 210px;
+    height: 210px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.18);
+
+    border: 4px solid rgba(255,255,255,0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 100px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.tech-icon {
+    position: absolute;
+
+    width: 70px;
+    height: 70px;
+
+    border-radius: 20px;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 38px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.2);
+}
+
+.icon1 {
+    top: 10px;
+    right: 30px;
+}
+
+.icon2 {
+    bottom: 25px;
+    right: 10px;
+}
+
+.icon3 {
+    bottom: 5px;
+    left: 20px;
+}
+
+.icon4 {
+    top: 30px;
+    left: 5px;
+}
+
+.student {
+    position: absolute;
+
+    font-size: 110px;
+
+    right: 35%;
+    bottom: 30px;
+}
+
+
+/* ===== TIÊU ĐỀ CÁC PHẦN ===== */
+
+.section {
+    margin: 55px 0;
+}
+
+.section-title {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    text-align: center;
+}
+
+.section-title span {
+    font-size: 38px;
+}
+
+.section-title h2 {
+    font-size: 30px;
+    color: #1e40af;
+}
+
+.section-intro {
+    text-align: center;
+
+    max-width: 850px;
+
+    margin: 10px auto 30px;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: #475569;
+}
+
+
+/* ===== KỸ NĂNG ===== */
+
+.skill-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.skill-card {
+    padding: 25px 20px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    min-height: 220px;
+
+    transition: .3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,.12);
+}
+
+.skill-icon {
+    font-size: 55px;
+
+    margin-bottom: 8px;
+}
+
+.skill-card h3 {
+    margin: 8px 0;
+
+    font-size: 20px;
+}
+
+.skill-card p {
+    line-height: 1.6;
+
+    color: #475569;
+}
+
+
+/* ===== MÀU CÁC Ô ===== */
+
+.blue {
+    background: #dbeafe;
+}
+
+.green {
+    background: #dcfce7;
+}
+
+.pink {
+    background: #fce7f3;
+}
+
+.purple {
+    background: #ede9fe;
+}
+
+.orange {
+    background: #ffedd5;
+}
+
+.cyan {
+    background: #cffafe;
+}
+
+.yellow {
+    background: #fef9c3;
+}
+
+
+/* ===== NGHỀ NGHIỆP ===== */
+
+.career-section {
+    padding: 50px 25px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef2ff,
+            #fdf4ff
+        );
+}
+
+.career-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 18px;
+}
+
+.career-card {
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 15px;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,.08);
+
+    transition: .3s;
+}
+
+.career-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,.15);
+}
+
+.career-picture {
+    height: 130px;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dbeafe,
+            #e0e7ff
+        );
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 70px;
+}
+
+.career-card h3 {
+    color: #1d4ed8;
+
+    margin: 14px 0 8px;
+}
+
+.career-card p {
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    color: #475569;
+}
+
+
+/* ===== TIN HỌC TRONG CUỘC SỐNG ===== */
+
+.application-section {
+    margin: 55px 0;
+}
+
+.application-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 15px;
+}
+
+.application-grid div {
+    background: #f0fdf4;
+
+    border-radius: 18px;
+
+    min-height: 120px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    font-size: 45px;
+
+    transition: .3s;
+}
+
+.application-grid div:hover {
+    transform: scale(1.04);
+
+    background: #dcfce7;
+}
+
+.application-grid strong {
+    display: block;
+
+    margin-top: 8px;
+
+    font-size: 16px;
+
+    color: #166534;
+}
+
+
+/* ===== THÔNG ĐIỆP CUỐI ===== */
+
+.message-section {
+    margin-top: 50px;
+
+    padding: 55px 30px;
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #172554,
+            #1e40af,
+            #0369a1
+        );
+
+    color: white;
+}
+
+.message-icon {
+    font-size: 65px;
+}
+
+.message-section h2 {
+    font-size: 32px;
+
+    line-height: 1.4;
+}
+
+.message-section h2 span {
+    color: #fde047;
+}
+
+.message-section p {
+    max-width: 850px;
+
+    margin: auto;
+
+    line-height: 1.8;
+
+    font-size: 17px;
+}
+
+
+/* ===== HIỂN THỊ TRÊN ĐIỆN THOẠI ===== */
+
+@media (max-width: 900px) {
+
+    .hero {
+        flex-direction: column;
+
+        padding: 35px 25px;
+
+        text-align: center;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-visual {
+        width: 100%;
+
+        height: 280px;
+
+        margin-top: 20px;
+    }
+
+    .skill-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .career-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .application-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+
+    .skill-grid,
+    .career-grid,
+    .application-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        border-radius: 18px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .section-title h2 {
+        font-size: 23px;
+    }
+}
     </style>
 </head>
 
@@ -101,45 +642,247 @@
             <a href="#">Scratch</a>
             <a href="#">Arduino</a>
             <a href="#">Sản phẩm học sinh</a>
-        </nav>
+        </nav>      
+<main class="home-page">
+    <section class="hero">
+        <div class="hero-text">
+            <span class="hero-label">
+                💻 KHÁM PHÁ THẾ GIỚI TIN HỌC
+            </span>
+            <h1>
+                TIN HỌC<br>
+                <span>MỞ RA NHIỀU CƠ HỘI</span><br>
+                CHO TƯƠNG LAI
+            </h1>
+            <p>
+                Tin học không chỉ là học cách sử dụng máy tính.
+                Học Tin học giúp em phát triển tư duy logic,
+                khả năng sáng tạo, giải quyết vấn đề và làm chủ công nghệ.
+            </p>
 
-        <main>
-
-            <h2>🎮 Sản phẩm Tin học</h2>
-
-            <div class="sanpham">
-
-               <div class="box">
-                    <h3>🍎 Game Hái táo</h3>
-                    <p>Game Scratch</p>
-             <a href="https://scratch.mit.edu/projects/1388058310/"
-                   target="_blank"
-                   style="display:inline-block;
-              margin-top:10px;
-              padding:10px 20px;
-              background:#2196f3;
-              color:white;
-              text-decoration:none;
-              border-radius:8px;
-              font-weight:bold;">
-                🎮 Chơi game
+            <a href="#kha-nang" class="hero-button">
+                🚀 Khám phá ngay
             </a>
         </div>
 
-                <div class="box">
-                    <h3>🚦 Arduino</h3>
-                    <p>Sản phẩm STEM</p>
-                </div>
+        <div class="hero-visual">
+            <div class="tech-circle">💻</div>
+            <div class="tech-icon icon1">🤖</div>
+            <div class="tech-icon icon2">🌐</div>
+            <div class="tech-icon icon3">🎮</div>
+            <div class="tech-icon icon4">📊</div>
+            <div class="student">👩‍💻</div>
+        </div>
+    </section>
 
-                <div class="box">
-                    <h3>💻 Sản phẩm học sinh</h3>
-                    <p>Đang cập nhật...</p>
-                </div>
 
+    <section id="kha-nang" class="section">
+
+        <div class="section-title">
+            <span>🚀</span>
+            <h2>HỌC TIN HỌC, EM SẼ LÀM ĐƯỢC GÌ?</h2>
+        </div>
+
+        <p class="section-intro">
+            Tin học trang bị cho học sinh những kiến thức và kỹ năng
+            cần thiết để học tập, sáng tạo và làm việc trong thời đại số.
+        </p>
+
+        <div class="skill-grid">
+
+            <div class="skill-card blue">
+                <div class="skill-icon">💻</div>
+                <h3>Sử dụng máy tính</h3>
+                <p>
+                    Soạn thảo văn bản, trình chiếu, bảng tính,
+                    quản lý dữ liệu và sử dụng phần mềm.
+                </p>
             </div>
 
-        </main>
+            <div class="skill-card green">
+                <div class="skill-icon">🧠</div>
+                <h3>Tư duy logic</h3>
+                <p>
+                    Biết phân tích vấn đề, tìm nguyên nhân
+                    và xây dựng cách giải quyết hiệu quả.
+                </p>
+            </div>
 
+            <div class="skill-card pink">
+                <div class="skill-icon">👨‍💻</div>
+                <h3>Lập trình</h3>
+                <p>
+                    Tạo trò chơi, hoạt hình, chương trình
+                    và các sản phẩm số.
+                </p>
+            </div>
+
+            <div class="skill-card purple">
+                <div class="skill-icon">🤖</div>
+                <h3>Khám phá AI</h3>
+                <p>
+                    Biết sử dụng trí tuệ nhân tạo đúng cách
+                    và tìm hiểu cách AI hoạt động.
+                </p>
+            </div>
+
+            <div class="skill-card orange">
+                <div class="skill-icon">🌐</div>
+                <h3>Thiết kế Website</h3>
+                <p>
+                    Tạo trang web, thiết kế giao diện
+                    và chia sẻ sản phẩm trên Internet.
+                </p>
+            </div>
+
+            <div class="skill-card cyan">
+                <div class="skill-icon">🔐</div>
+                <h3>An toàn số</h3>
+                <p>
+                    Tìm kiếm, xử lý và chia sẻ thông tin
+                    an toàn trên Internet.
+                </p>
+            </div>
+
+            <div class="skill-card yellow">
+                <div class="skill-icon">🦾</div>
+                <h3>STEM & Robotics</h3>
+                <p>
+                    Thiết kế mô hình, điều khiển robot,
+                    Arduino và các sản phẩm công nghệ.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="career-section">
+
+        <div class="section-title">
+            <span>🎯</span>
+            <h2>TỪ TIN HỌC ĐẾN NHỮNG NGHỀ NGHIỆP TƯƠNG LAI</h2>
+        </div>
+
+        <p class="section-intro">
+            Nếu yêu thích công nghệ, sáng tạo và giải quyết vấn đề,
+            em có thể khám phá rất nhiều nghề nghiệp trong tương lai.
+        </p>
+
+        <div class="career-grid">
+
+            <div class="career-card">
+                <div class="career-picture">👨‍💻</div>
+                <h3>Lập trình viên</h3>
+                <p>Phát triển phần mềm, ứng dụng và website.</p>
+            </div>
+
+            <div class="career-card">
+                <div class="career-picture">🤖</div>
+                <h3>Kỹ sư AI</h3>
+                <p>Phát triển hệ thống trí tuệ nhân tạo.</p>
+            </div>
+
+            <div class="career-card">
+                <div class="career-picture">💻</div>
+                <h3>Kỹ sư phần mềm</h3>
+                <p>Thiết kế và xây dựng sản phẩm phần mềm.</p>
+            </div>
+
+            <div class="career-card">
+                <div class="career-picture">🌐</div>
+                <h3>Thiết kế Website</h3>
+                <p>Thiết kế giao diện và xây dựng website.</p>
+            </div>
+
+            <div class="career-card">
+                <div class="career-picture">📊</div>
+                <h3>Phân tích dữ liệu</h3>
+                <p>Phân tích và trực quan hóa dữ liệu.</p>
+            </div>
+
+            <div class="career-card">
+                <div class="career-picture">🎮</div>
+                <h3>Phát triển Game</h3>
+                <p>Thiết kế và lập trình trò chơi.</p>
+            </div>
+
+            <div class="career-card">
+                <div class="career-picture">🛡️</div>
+                <h3>An toàn thông tin</h3>
+                <p>Bảo vệ hệ thống và dữ liệu.</p>
+            </div>
+
+            <div class="career-card">
+                <div class="career-picture">🦾</div>
+                <h3>IoT & Robotics</h3>
+                <p>Phát triển robot và thiết bị thông minh.</p>
+            </div>
+
+            <div class="career-card">
+                <div class="career-picture">☁️</div>
+                <h3>Cloud Engineer</h3>
+                <p>Làm việc với điện toán đám mây.</p>
+            </div>
+
+            <div class="career-card">
+                <div class="career-picture">👩‍🏫</div>
+                <h3>Giáo viên Tin học</h3>
+                <p>Giảng dạy và phát triển giáo dục công nghệ.</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="application-section">
+
+        <div class="section-title">
+            <span>🌎</span>
+            <h2>TIN HỌC CÓ MẶT Ở ĐÂU?</h2>
+        </div>
+
+        <p class="section-intro">
+            Công nghệ thông tin hiện diện trong hầu hết các lĩnh vực
+            của cuộc sống và sản xuất.
+        </p>
+
+        <div class="application-grid">
+
+            <div>🏫<strong>Giáo dục</strong></div>
+            <div>🏥<strong>Y tế</strong></div>
+            <div>🚜<strong>Nông nghiệp</strong></div>
+            <div>🏭<strong>Công nghiệp</strong></div>
+            <div>🏦<strong>Ngân hàng</strong></div>
+            <div>🚆<strong>Giao thông</strong></div>
+            <div>🛒<strong>Thương mại</strong></div>
+            <div>🎬<strong>Truyền thông</strong></div>
+            <div>🌱<strong>Môi trường</strong></div>
+            <div>🏢<strong>Quản lý nhà nước</strong></div>
+
+        </div>
+    </section>
+
+
+    <section class="message-section">
+
+        <div class="message-icon">🚀</div>
+
+        <h2>
+            HỌC TIN HỌC HÔM NAY –
+            <span>KIẾN TẠO TƯƠNG LAI NGÀY MAI</span>
+        </h2>
+
+        <p>
+            Có thể hôm nay em chưa biết mình sẽ làm nghề gì trong tương lai.
+            Nhưng những kiến thức và kỹ năng Tin học hôm nay sẽ giúp em
+            có thêm công cụ để tạo ra tương lai của chính mình.
+        </p>
+
+    </section>
+
+</main>
+          
         <footer>
             © 2026 Góc Tin học cô Hiếu
         </footer>
