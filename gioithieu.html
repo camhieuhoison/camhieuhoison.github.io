@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Giới thiệu - Góc Tin học cô Hiếu</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #eaf4ff;
+            color: #1e293b;
+        }
+
+
+        /* =========================
+           THANH MENU
+        ========================= */
+
+        nav {
+            background: #075985;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            flex-wrap: wrap;
+
+            padding: 14px 10px;
+
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+        }
+
+        nav a {
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            padding: 10px 15px;
+
+            margin: 3px;
+
+            border-radius: 20px;
+
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: #0ea5e9;
+
+            transform: translateY(-2px);
+        }
+
+        nav a.active {
+            background: #0284c7;
+        }
+
+
+        /* =========================
+           KHUNG CHÍNH
+        ========================= */
+
+        .container {
+            max-width: 1050px;
+
+            margin: 40px auto;
+
+            padding: 0 20px;
+        }
+
+
+        /* =========================
+           TIÊU ĐỀ
+        ========================= */
+
+        .page-title {
+            text-align: center;
+
+            margin-bottom: 35px;
+        }
+
+        .page-title .icon {
+            font-size: 65px;
+        }
+
+        .page-title h1 {
+            margin: 10px 0;
+
+            font-size: 38px;
+
+            color: #075985;
+        }
+
+        .page-title p {
+            font-size: 18px;
+
+            color: #475569;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           PHẦN GIỚI THIỆU
+        ========================= */
+
+        .intro-card {
+            background: white;
+
+            border-radius: 25px;
+
+            padding: 35px;
+
+            margin-bottom: 25px;
+
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+
+            border-left: 7px solid #0284c7;
+        }
+
+        .intro-card h2 {
+            color: #075985;
+
+            margin-top: 0;
+        }
+
+        .intro-card p {
+            font-size: 17px;
+
+            line-height: 1.8;
+
+            color: #475569;
+        }
+
+
+        /* =========================
+           NỀN TẢNG CHUYÊN MÔN
+        ========================= */
+
+        .section-title {
+            text-align: center;
+
+            color: #075985;
+
+            font-size: 28px;
+
+            margin: 45px 0 25px;
+        }
+
+        .qualification-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .qualification-card {
+            background: white;
+
+            border-radius: 22px;
+
+            padding: 30px 20px;
+
+            text-align: center;
+
+            min-height: 220px;
+
+            box-shadow:
+                0 8px 22px rgba(0,0,0,0.08);
+
+            transition: 0.3s;
+        }
+
+        .qualification-card:hover {
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 15px 30px rgba(0,0,0,0.13);
+        }
+
+        .qualification-icon {
+            font-size: 55px;
+
+            margin-bottom: 15px;
+        }
+
+        .qualification-card h3 {
+            color: #0369a1;
+
+            font-size: 19px;
+
+            line-height: 1.4;
+        }
+
+        .qualification-card p {
+            color: #64748b;
+
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           LĨNH VỰC QUAN TÂM
+        ========================= */
+
+        .interest-section {
+            margin-top: 45px;
+
+            padding: 35px;
+
+            border-radius: 25px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #dbeafe,
+                    #ecfeff
+                );
+        }
+
+        .interest-grid {
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+            margin-top: 25px;
+        }
+
+        .interest-item {
+            background: white;
+
+            padding: 12px 20px;
+
+            border-radius: 30px;
+
+            color: #075985;
+
+            font-weight: bold;
+
+            box-shadow:
+                0 4px 10px rgba(0,0,0,0.08);
+        }
+
+
+        /* =========================
+           QUAN ĐIỂM DẠY HỌC
+        ========================= */
+
+        .teaching-section {
+            margin-top: 45px;
+
+            background: white;
+
+            border-radius: 25px;
+
+            padding: 40px;
+
+            text-align: center;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.08);
+        }
+
+        .teaching-icon {
+            font-size: 60px;
+        }
+
+        .teaching-section h2 {
+            color: #075985;
+        }
+
+        .teaching-section p {
+            max-width: 850px;
+
+            margin: 15px auto;
+
+            font-size: 18px;
+
+            line-height: 1.8;
+
+            color: #475569;
+        }
+
+
+        /* =========================
+           LỜI NHẮN HỌC SINH
+        ========================= */
+
+        .message-section {
+            margin-top: 45px;
+
+            padding: 45px 30px;
+
+            border-radius: 28px;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #075985,
+                    #0369a1,
+                    #0891b2
+                );
+
+            color: white;
+        }
+
+        .message-section .message-icon {
+            font-size: 60px;
+        }
+
+        .message-section h2 {
+            font-size: 28px;
+
+            margin: 15px 0;
+        }
+
+        .message-section p {
+            max-width: 800px;
+
+            margin: auto;
+
+            font-size: 18px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           CHÂN TRANG
+        ========================= */
+
+        footer {
+            margin-top: 50px;
+
+            padding: 25px;
+
+            background: #075985;
+
+            color: white;
+
+            text-align: center;
+
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           ĐIỆN THOẠI
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .qualification-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-title h1 {
+                font-size: 30px;
+            }
+
+            .intro-card,
+            .teaching-section,
+            .interest-section {
+                padding: 25px;
+            }
+
+            nav a {
+                font-size: 14px;
+
+                padding: 8px 10px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         MENU
+    ========================= -->
+
+    <nav>
+
+        <a href="index.html">
+            🏠 Trang chủ
+        </a>
+
+        <a href="#">
+            🎮 Scratch
+        </a>
+
+        <a href="#">
+            🤖 Arduino
+        </a>
+
+        <a href="#">
+            📁 Sản phẩm học sinh
+        </a>
+
+        <a href="#">
+            💡 Sản phẩm minh họa
+        </a>
+
+        <a href="#">
+            📚 Kho học liệu
+        </a>
+
+        <a href="gioithieu.html" class="active">
+            👩‍🏫 Giới thiệu
+        </a>
+
+    </nav>
+
+
+
+    <!-- =========================
+         NỘI DUNG
+    ========================= -->
+
+    <div class="container">
+
+
+        <!-- TIÊU ĐỀ -->
+
+        <div class="page-title">
+
+            <div class="icon">
+                👩‍🏫
+            </div>
+
+            <h1>
+                GIỚI THIỆU
+            </h1>
+
+            <p>
+                Góc Tin học cô Hiếu
+            </p>
+
+        </div>
+
+
+
+        <!-- GIỚI THIỆU WEBSITE -->
+
+        <div class="intro-card">
+
+            <h2>
+                💙 Chào mừng các em đến với Góc Tin học cô Hiếu
+            </h2>
+
+            <p>
+                Góc Tin học cô Hiếu được xây dựng với mong muốn
+                chia sẻ kiến thức, học liệu và những sản phẩm
+                sáng tạo trong môn Tin học đến các em học sinh.
+            </p>
+
+            <p>
+                Thông qua website, các em có thể khám phá thêm
+                về lập trình, công nghệ số, trí tuệ nhân tạo,
+                Scratch, Arduino, STEM và nhiều lĩnh vực thú vị
+                khác của thế giới công nghệ.
+            </p>
+
+        </div>
+
+
+
+        <!-- NỀN TẢNG CHUYÊN MÔN -->
+
+        <h2 class="section-title">
+            🎓 NỀN TẢNG CHUYÊN MÔN
+        </h2>
+
+
+        <div class="qualification-grid">
+
+
+            <div class="qualification-card">
+
+                <div class="qualification-icon">
+                    🎓
+                </div>
+
+                <h3>
+                    Đại học Ngoại ngữ – Tin học
+                    TP. Hồ Chí Minh
+                </h3>
+
+                <p>
+                    Nền tảng đào tạo gắn với
+                    ngoại ngữ và công nghệ thông tin.
+                </p>
+
+            </div>
+
+
+
+            <div class="qualification-card">
+
+                <div class="qualification-icon">
+                    💻
+                </div>
+
+                <h3>
+                    Đại học Sài Gòn
+                </h3>
+
+                <p>
+                    Chuyên ngành
+                    <strong>Công nghệ thông tin</strong>.
+                </p>
+
+            </div>
+
+
+
+            <div class="qualification-card">
+
+                <div class="qualification-icon">
+                    🌐
+                </div>
+
+                <h3>
+                    Lập trình Web PHP
+                </h3>
+
+                <p>
+                    Chứng chỉ lập trình Web PHP,
+                    bổ sung nền tảng về phát triển Web.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- LĨNH VỰC QUAN TÂM -->
+
+        <div class="interest-section">
+
+            <h2 class="section-title">
+                💡 LĨNH VỰC QUAN TÂM
+            </h2>
+
+            <div class="interest-grid">
+
+                <div class="interest-item">
+                    💻 Công nghệ thông tin
+                </div>
+
+                <div class="interest-item">
+                    👨‍💻 Lập trình
+                </div>
+
+                <div class="interest-item">
+                    🌐 Thiết kế Web
+                </div>
+
+                <div class="interest-item">
+                    🎮 Scratch
+                </div>
+
+                <div class="interest-item">
+                    🤖 Trí tuệ nhân tạo
+                </div>
+
+                <div class="interest-item">
+                    🦾 Robotics
+                </div>
+
+                <div class="interest-item">
+                    🔧 STEM
+                </div>
+
+                <div class="interest-item">
+                    🌎 Công nghệ số
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- QUAN ĐIỂM DẠY HỌC -->
+
+        <div class="teaching-section">
+
+            <div class="teaching-icon">
+                🌱
+            </div>
+
+            <h2>
+                QUAN ĐIỂM VỀ DẠY HỌC TIN HỌC
+            </h2>
+
+            <p>
+                Tin học không chỉ là học cách sử dụng máy tính.
+                Tin học còn giúp học sinh hình thành tư duy logic,
+                khả năng giải quyết vấn đề, sự sáng tạo và
+                từng bước làm chủ công nghệ.
+            </p>
+
+            <p>
+                Mỗi bài học, mỗi bài thực hành và mỗi sản phẩm
+                mà các em tạo ra đều có thể trở thành một bước
+                nhỏ trên hành trình khám phá thế giới công nghệ.
+            </p>
+
+        </div>
+
+
+
+        <!-- LỜI NHẮN -->
+
+        <div class="message-section">
+
+            <div class="message-icon">
+                🚀
+            </div>
+
+            <h2>
+                GỬI ĐẾN CÁC EM
+            </h2>
+
+            <p>
+                “Các em không cần phải giỏi Tin học ngay từ đầu.
+                Hãy mạnh dạn khám phá, dám thử, dám sáng tạo
+                và không ngại những lần chưa thành công.
+                Mỗi sản phẩm các em tạo ra hôm nay có thể
+                là bước đầu tiên dẫn đến một nghề nghiệp
+                mà các em yêu thích trong tương lai.”
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         CHÂN TRANG
+    ========================= -->
+
+    <footer>
+
+        🌟 Góc Tin học cô Hiếu
+
+        <br>
+
+        Học Tin học hôm nay –
+        Kiến tạo tương lai ngày mai.
+
+    </footer>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+  
