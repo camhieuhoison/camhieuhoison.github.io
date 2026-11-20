@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khám phá Arduino - Góc Tin học Cô Hiếu</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fc;
+    color: #26364a;
+    line-height: 1.7;
+}
+
+/* PHẦN ĐẦU TRANG */
+header {
+    background: #2196f3;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header p {
+    margin: 8px 0 0;
+    font-size: 19px;
+}
+
+/* THANH MENU */
+nav {
+    background: #1565c0;
+    text-align: center;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 17px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 5px;
+}
+
+nav a:hover {
+    color: #ffeb3b;
+}
+
+/* NỘI DUNG */
+main {
+    max-width: 1150px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+.hero {
+    background: linear-gradient(120deg, #1456cf, #35a3ed);
+    color: white;
+    padding: 45px 30px;
+    border-radius: 22px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hero h2 {
+    font-size: 34px;
+    margin: 10px 0;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.section {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+.section h2 {
+    color: #1565c0;
+    border-left: 6px solid #2196f3;
+    padding-left: 12px;
+    margin-top: 0;
+}
+
+.section h3 {
+    color: #1565c0;
+}
+
+.highlight {
+    background: #eaf4ff;
+    padding: 18px;
+    border-radius: 12px;
+    margin-top: 15px;
+}
+
+/* CÁC THẺ MINH HỌA */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.item {
+    background: #f0f7ff;
+    padding: 20px 12px;
+    border-radius: 14px;
+    text-align: center;
+    border: 1px solid #dceaff;
+}
+
+.item .picture {
+    font-size: 55px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.item h3 {
+    margin: 5px 0;
+}
+
+.item p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* SƠ ĐỒ HOẠT ĐỘNG */
+.process {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    text-align: center;
+}
+
+.process-item {
+    padding: 22px 12px;
+    background: #eaf4ff;
+    border-radius: 14px;
+}
+
+.process-item span {
+    font-size: 42px;
+}
+
+/* SẢN PHẨM */
+.project {
+    background: #f5f8ff;
+    border-radius: 14px;
+    padding: 18px;
+    text-align: center;
+}
+
+.project .picture {
+    font-size: 55px;
+}
+
+.project h3 {
+    margin: 8px 0;
+}
+
+/* THÔNG TIN */
+.note {
+    background: #fff7df;
+    border-left: 5px solid #f5b82e;
+    padding: 15px 18px;
+    border-radius: 8px;
+}
+
+/* CHÂN TRANG */
+footer {
+    background: #1565c0;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    margin-top: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+/* ĐIỆN THOẠI */
+@media (max-width: 650px) {
+    header h1 {
+        font-size: 25px;
+    }
+
+    nav a {
+        margin: 4px 7px;
+        font-size: 14px;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+
+    main {
+        padding: 18px 12px;
+    }
+
+    .section {
+        padding: 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <h1>🌸 GÓC TIN HỌC CÔ HIẾU</h1>
+    <p>Khám phá - Sáng tạo - Công nghệ</p>
+</header>
+
+<!-- MENU -->
+<nav>
+    <a href="index.html">Trang chủ</a>
+    <a href="scratch.html">Scratch</a>
+    <a href="arduino.html">Arduino</a>
+    <a href="#">Sản phẩm học sinh</a>
+    <a href="sanphamminhhoa.html">Sản phẩm minh họa</a>
+    <a href="#">Kho học liệu</a>
+    <a href="gioithieu.html">Giới thiệu</a>
+</nav>
+
+<main>
+
+<!-- GIỚI THIỆU -->
+<section class="hero">
+    <div style="font-size:55px;">💡 🤖 ⚙️</div>
+    <h2>KHÁM PHÁ LẬP TRÌNH ARDUINO</h2>
+    <p>
+        Làm quen với lập trình điện tử, khám phá những
+        thiết bị thông minh và tìm hiểu cách công nghệ
+        được ứng dụng trong cuộc sống.
+    </p>
+</section>
+
+<!-- PHẦN 1 -->
+<section class="section">
+    <h2>1. Arduino là gì?</h2>
+
+    <p>
+        Arduino là một nền tảng điện tử mã nguồn mở,
+        được sử dụng trong học tập, nghiên cứu và sáng tạo
+        các sản phẩm công nghệ có khả năng tự động điều khiển.
+    </p>
+
+    <p>
+        Thông qua Arduino, người dùng có thể viết chương trình
+        để điều khiển đèn LED, động cơ, cảm biến và nhiều
+        thiết bị điện tử khác.
+    </p>
+
+    <div class="highlight">
+        💡 <b>Em có thể hiểu đơn giản:</b>
+        Arduino giống như một bộ não nhỏ.
+        Con người viết chương trình để Arduino nhận tín hiệu,
+        xử lý thông tin và điều khiển thiết bị thực hiện
+        công việc theo yêu cầu.
+    </div>
+</section>
+
+<!-- PHẦN 2 -->
+<section class="section">
+    <h2>2. Nhận diện bo mạch Arduino</h2>
+
+    <div class="item">
+        <span class="picture">🔌</span>
+        <h3>Bo mạch Arduino Uno</h3>
+        <p>
+            Một loại bo mạch phổ biến được sử dụng
+            để làm quen với lập trình điện tử.
+        </p>
+        <p>
+            Bo mạch có các chân kết nối với máy tính,
+            cảm biến và thiết bị điện tử.
+        </p>
+    </div>
+
+    <h3>Arduino gồm hai thành phần chính:</h3>
+    <div class="grid">
+        <div class="item">
+            <span class="picture">🖥️</span>
+            <h3>Phần cứng</h3>
+            <p>Bo mạch điện tử và các linh kiện kết nối.</p>
+        </div>
+
+        <div class="item">
+            <span class="picture">💻</span>
+            <h3>Phần mềm</h3>
+            <p>Môi trường lập trình Arduino IDE để viết và nạp chương trình.</p>
+        </div>
+    </div>
+</section>
+
+<!-- PHẦN 3 -->
+<section class="section">
+    <h2>3. Một số linh kiện thường gặp</h2>
+
+    <p>
+        Khi tìm hiểu Arduino, em sẽ thường bắt gặp
+        những linh kiện điện tử sau:
+    </p>
+
+    <div class="grid">
+        <div class="item">
+            <span class="picture">🔴</span>
+            <h3>Đèn LED</h3>
+            <p>Phát sáng khi được cấp điện đúng cách.</p>
+        </div>
+
+        <div class="item">
+            <span class="picture">🔘</span>
+            <h3>Nút nhấn</h3>
+            <p>Nhận thao tác điều khiển từ người dùng.</p>
+        </div>
+
+        <div class="item">
+            <span class="picture">〰️</span>
+            <h3>Điện trở</h3>
+            <p>Hạn chế dòng điện trong mạch.</p>
+        </div>
+
+        <div class="item">
+            <span class="picture">📡</span>
+            <h3>Cảm biến</h3>
+            <p>Nhận biết các thông tin từ môi trường.</p>
+        </div>
+
+        <div class="item">
+            <span class="picture">⚙️</span>
+            <h3>Động cơ</h3>
+            <p>Tạo chuyển động cho các mô hình.</p>
+        </div>
+
+        <div class="item">
+            <span class="picture">🔧</span>
+            <h3>Servo</h3>
+            <p>Điều khiển góc quay theo yêu cầu.</p>
+        </div>
+    </div>
+</section>
+
+<!-- PHẦN 4 -->
+<section class="section">
+    <h2>4. Arduino hoạt động như thế nào?</h2>
+
+    <p>
+        Arduino thường thực hiện công việc theo ba bước:
+    </p>
+
+    <div class="process">
+        <div class="process-item">
+            <span>👁️</span>
+            <h3>1. Nhận tín hiệu</h3>
+            <p>Nhận thông tin từ cảm biến, nút nhấn...</p>
+        </div>
+
+        <div class="process-item">
+            <span>🧠</span>
+            <h3>2. Xử lý thông tin</h3>
+            <p>Thực hiện chương trình đã được lập trình.</p>
+        </div>
+
+        <div class="process-item">
+            <span>💡</span>
+            <h3>3. Điều khiển thiết bị</h3>
+            <p>Bật đèn, quay động cơ, phát âm thanh...</p>
+        </div>
+    </div>
+</section>
+
+<!-- PHẦN 5 -->
+<section class="section">
+    <h2>5. Arduino có thể tạo ra những sản phẩm nào?</h2>
+
+    <p>
+        Từ những linh kiện đơn giản, Arduino có thể được
+        ứng dụng để tạo ra nhiều mô hình thú vị.
+    </p>
+
+    <div class="grid">
+        <div class="project">
+            <div class="picture">🚦</div>
+            <h3>Đèn giao thông</h3>
+            <p>Điều khiển đèn theo thời gian.</p>
+        </div>
+
+        <div class="project">
+            <div class="picture">🤖</div>
+            <h3>Robot thông minh</h3>
+            <p>Nhận biết và tránh vật cản.</p>
+        </div>
+
+        <div class="project">
+            <div class="picture">🪴</div>
+            <h3>Tưới cây tự động</h3>
+            <p>Kiểm tra độ ẩm đất và điều khiển tưới.</p>
+        </div>
+
+        <div class="project">
+            <div class="picture">🌡️</div>
+            <h3>Đo nhiệt độ</h3>
+            <p>Đo và hiển thị nhiệt độ môi trường.</p>
+        </div>
+
+        <div class="project">
+            <div class="picture">🏠</div>
+            <h3>Nhà thông minh</h3>
+            <p>Điều khiển các thiết bị trong nhà.</p>
+        </div>
+
+        <div class="project">
+            <div class="picture">🗑️</div>
+            <h3>Thùng rác thông minh</h3>
+            <p>Tự động mở nắp khi có người đến gần.</p>
+        </div>
+    </div>
+</section>
+
+<!-- PHẦN 6 -->
+<section class="section">
+    <h2>6. Học Arduino có ích gì?</h2>
+
+    <ul>
+        <li>Làm quen với lập trình và điện tử.</li>
+        <li>Hiểu cách máy móc và thiết bị tự động hoạt động.</li>
+        <li>Vận dụng kiến thức thuật toán, biến, câu lệnh điều kiện và vòng lặp.</li>
+        <li>Phát triển tư duy logic và khả năng sáng tạo.</li>
+        <li>Biết ứng dụng kiến thức Tin học vào thực tế.</li>
+    </ul>
+
+    <div class="highlight">
+        🌟 <b>Thông điệp dành cho học sinh:</b>
+        Lập trình không chỉ là viết những dòng lệnh trên máy tính.
+        Lập trình còn giúp chúng ta tạo ra những thiết bị thông minh,
+        điều khiển máy móc và biến ý tưởng thành sản phẩm thực tế.
+    </div>
+</section>
+
+<!-- TÀI LIỆU THAM KHẢO -->
+<section class="section">
+    <h2>7. Khám phá thêm về Arduino</h2>
+
+    <p>
+        Nếu muốn tìm hiểu sâu hơn, em có thể tham khảo
+        các trang học tập sau:
+    </p>
+
+    <ul>
+        <li>
+            <a href="https://www.arduino.cc/" target="_blank">
+                Trang chủ Arduino
+            </a>
+        </li>
+        <li>
+            <a href="https://docs.arduino.cc/" target="_blank">
+                Tài liệu hướng dẫn Arduino
+            </a>
+        </li>
+        <li>
+            <a href="https://www.tinkercad.com/" target="_blank">
+                Tinkercad - Mô phỏng mạch điện
+            </a>
+        </li>
+    </ul>
+
+    <div class="note">
+        ⚠️ Khi thực hành với linh kiện điện tử,
+        cần có sự hướng dẫn của giáo viên.
+        Không tự ý đấu nối với nguồn điện lưới 220V.
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 Góc Tin học cô Hiếu</p>
+    <p>Khám phá - Sáng tạo - Công nghệ</p>
+    <a href="index.html">← Quay về trang chủ</a>
+</footer>
+
+</body>
+</html>
