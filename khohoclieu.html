@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Kho học liệu Tin học - Góc Tin học Cô Hiếu. Video hướng dẫn, bài thực hành, tài liệu và câu hỏi ôn tập dành cho học sinh THCS.">
+<title>Kho học liệu | Góc Tin học Cô Hiếu</title>
+<style>
+:root{--blue:#1769aa;--blue2:#2487cc;--pale:#eaf5fd;--ink:#203247;--muted:#65788b;--line:#dce8f1;--white:#fff;--shadow:0 8px 24px rgba(28,79,119,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f5f9fc;color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}.topbar{background:linear-gradient(120deg,#12558f,#248bd0);color:white;padding:30px 18px 24px;text-align:center}.topbar h1{margin:0;font-size:clamp(25px,4vw,36px);letter-spacing:.4px}.topbar p{margin:7px 0 0;font-size:15px;opacity:.96}.nav{background:#fff;box-shadow:0 3px 12px rgba(0,0,0,.07);position:sticky;top:0;z-index:10}.nav-inner{max-width:1120px;margin:auto;display:flex;justify-content:center;flex-wrap:wrap;padding:0 12px}.nav a{padding:14px 15px;color:#24516f;font-weight:700;font-size:14px}.nav a:hover,.nav a.active{color:var(--blue);background:#eef7fd}.wrap{width:min(1120px,92%);margin:28px auto 55px}.intro{background:linear-gradient(120deg,#e8f4fc,#f7fbff);border:1px solid #d7eaf8;border-radius:18px;padding:26px;text-align:center}.intro h2{font-size:25px;color:#155f9b;margin:0 0 6px}.intro p{margin:0 auto;color:#526c80;max-width:720px}.searchrow{display:flex;gap:10px;max-width:700px;margin:20px auto 0}.searchrow input{flex:1;min-width:0;border:1px solid #cbdce9;border-radius:10px;padding:13px 15px;font-size:15px;outline-color:var(--blue)}.searchrow button{border:0;background:var(--blue);color:white;border-radius:10px;padding:0 20px;font-weight:bold;cursor:pointer}.section{margin-top:30px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:14px}.section h2{font-size:21px;color:#194f78;margin:0}.section-head p{margin:0;color:var(--muted);font-size:13px}.filters{display:flex;flex-wrap:wrap;gap:9px}.chip{border:1px solid #cbddea;background:#fff;color:#315b79;border-radius:30px;padding:9px 17px;font-weight:700;cursor:pointer}.chip:hover,.chip.active{background:var(--blue);border-color:var(--blue);color:white}.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.category{background:white;border:1px solid var(--line);border-radius:15px;padding:19px;box-shadow:var(--shadow);transition:.18s}.category:hover{transform:translateY(-3px);border-color:#a9cfe9}.cat-icon{font-size:29px}.category h3{font-size:16px;margin:8px 0 4px;color:#1c5e91}.category p{font-size:13px;color:var(--muted);margin:0}.featured{display:grid;grid-template-columns:1.15fr 1fr;background:#fff;border:1px solid var(--line);border-radius:17px;overflow:hidden;box-shadow:var(--shadow)}.feature-art{min-height:250px;background:linear-gradient(135deg,#d9efff,#f2f9ff);display:flex;align-items:center;justify-content:center;padding:24px}.sheet{width:min(390px,100%);background:#fff;border:1px solid #c7d9e7;border-radius:9px;box-shadow:0 12px 30px rgba(27,87,132,.13);overflow:hidden;transform:rotate(-2deg)}.sheet-top{background:#217346;color:#fff;padding:9px 13px;font-weight:bold;font-size:13px}.sheet-grid{display:grid;grid-template-columns:repeat(4,1fr);font-size:11px;text-align:center}.sheet-grid span{padding:10px 4px;border:1px solid #e3ebf0}.sheet-grid span:nth-child(-n+4){background:#e8f3ec;font-weight:bold}.feature-copy{padding:25px;display:flex;flex-direction:column;justify-content:center}.tag{display:inline-block;background:#e7f4fd;color:#1769aa;padding:4px 10px;border-radius:20px;font-size:12px;font-weight:bold;width:max-content}.feature-copy h3{font-size:21px;line-height:1.35;margin:12px 0 8px}.feature-copy p{color:var(--muted);margin:0 0 13px}.meta{font-size:13px;color:#62798d;margin-bottom:16px}.btn{display:inline-block;background:var(--blue);color:white;padding:10px 16px;border-radius:9px;font-size:14px;font-weight:bold;width:max-content}.btn:hover{background:#0e548d}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{background:white;border:1px solid var(--line);border-radius:15px;padding:18px;box-shadow:var(--shadow)}.card-icon{height:100px;border-radius:11px;background:linear-gradient(135deg,#e5f3fc,#f6fbff);display:flex;align-items:center;justify-content:center;font-size:42px;margin-bottom:13px}.card h3{font-size:16px;margin:9px 0 6px}.card p{font-size:13px;color:var(--muted);margin:0 0 13px}.card .links{display:flex;gap:12px;flex-wrap:wrap;font-size:13px;font-weight:bold;color:var(--blue)}.empty{display:none;background:#fff;border:1px dashed #b8cddd;border-radius:12px;padding:24px;text-align:center;color:var(--muted);grid-column:1/-1}.note{margin-top:28px;background:#fff;border-left:4px solid #55a4d8;padding:16px 18px;border-radius:9px;color:#526c80;font-size:14px}.footer{background:#124f80;color:#eaf5fc;text-align:center;padding:23px 15px;font-size:13px}.footer strong{display:block;font-size:15px;margin-bottom:4px}
+@media(max-width:800px){.categories{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:repeat(2,1fr)}.featured{grid-template-columns:1fr}.feature-art{min-height:205px}.nav a{padding:12px 10px;font-size:13px}}
+@media(max-width:520px){.wrap{width:94%;margin-top:18px}.intro{padding:20px 15px}.searchrow{flex-direction:column}.searchrow button{padding:12px}.categories{gap:10px}.category{padding:14px}.cards{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:4px}.nav-inner{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap}.nav a{white-space:nowrap}.feature-copy{padding:20px}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <h1>🌸 GÓC TIN HỌC CÔ HIẾU</h1>
+  <p>KHÁM PHÁ – SÁNG TẠO – CÔNG NGHỆ</p>
+</header>
+<nav class="nav" aria-label="Điều hướng chính"><div class="nav-inner">
+  <a href="index.html">Trang chủ</a><a href="scratch.html">Scratch</a><a href="arduino.html">Arduino</a><a href="sanphamminhhoa.html">Sản phẩm minh họa</a><a class="active" href="khohoclieu.html">Kho học liệu</a><a href="gioithieu.html">Giới thiệu</a>
+</div></nav>
+<main class="wrap">
+  <section class="intro">
+    <h2>📚 KHO HỌC LIỆU TIN HỌC</h2>
+    <p>Học từ tình huống thực tế – Làm theo hướng dẫn – Tạo sản phẩm của chính mình. Chọn khối lớp hoặc tìm nội dung em đang cần.</p>
+    <div class="searchrow"><input id="searchInput" type="search" placeholder="Tìm bài học, video, tài liệu..." aria-label="Tìm học liệu"><button type="button" onclick="searchMaterials()">Tìm kiếm</button></div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2>🎓 Chọn khối lớp</h2><p>Lọc học liệu theo chương trình học</p></div>
+    <div class="filters" id="gradeFilters"><button class="chip active" data-grade="all">Tất cả</button><button class="chip" data-grade="6">Tin học 6</button><button class="chip" data-grade="7">Tin học 7</button><button class="chip" data-grade="8">Tin học 8</button><button class="chip" data-grade="9">Tin học 9</button></div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2>🧭 Chuyên mục học liệu</h2><p>Chọn hình thức học tập phù hợp</p></div>
+    <div class="categories">
+      <a class="category" href="#video"><div class="cat-icon">🎬</div><h3>Video hướng dẫn</h3><p>Tình huống thực tế và thao tác từng bước.</p></a>
+      <a class="category" href="#practice"><div class="cat-icon">💻</div><h3>Bài thực hành</h3><p>Nhiệm vụ, sản phẩm mẫu và yêu cầu cần hoàn thành.</p></a>
+      <a class="category" href="#documents"><div class="cat-icon">📁</div><h3>Tệp tài liệu</h3><p>File Excel, Word, PDF và phiếu học tập.</p></a>
+      <a class="category" href="#quiz"><div class="cat-icon">📝</div><h3>Ôn tập – Kiểm tra</h3><p>Câu hỏi luyện tập và tự đánh giá kiến thức.</p></a>
+    </div>
+  </section>
+
+  <section class="section" id="featuredSection">
+    <div class="section-head"><h2>⭐ Bài học nổi bật</h2><p>Nội dung sẽ được cập nhật theo từng bài học</p></div>
+    <article class="featured searchable" data-grade="all" data-keywords="excel bảng theo dõi thu chi tính tổng thực hành video">
+      <div class="feature-art" aria-label="Hình minh họa bảng tính Excel"><div class="sheet"><div class="sheet-top">▦ BẢNG THEO DÕI THU – CHI</div><div class="sheet-grid"><span>Ngày</span><span>Nội dung</span><span>Thu</span><span>Chi</span><span>01/...</span><span>Đóng góp</span><span>50.000</span><span>–</span><span>02/...</span><span>Mua đồ</span><span>–</span><span>20.000</span><span>...</span><span>...</span><span>...</span><span>...</span></div></div></div>
+      <div class="feature-copy"><span class="tag">BÀI MẪU MINH HỌA</span><h3>Tạo bảng theo dõi thu – chi bằng Excel</h3><p>Từ tình huống quản lý các khoản thu, chi quen thuộc, học sinh làm quen với việc nhập dữ liệu, trình bày bảng và sử dụng công thức tính toán.</p><div class="meta">🎯 Sản phẩm: Bảng theo dõi thu – chi · ⏱ Video dự kiến: 3–5 phút</div><span class="btn" aria-label="Nội dung mẫu đang được chuẩn bị">Nội dung đang được chuẩn bị</span></div>
+    </article>
+  </section>
+
+  <section class="section" id="video">
+    <div class="section-head"><h2>🎬 Video hướng dẫn</h2><p>Quan sát – Tạm dừng – Thực hiện theo</p></div>
+    <div class="cards"><article class="card searchable" data-grade="all" data-keywords="video excel thực hành bảng tính"><div class="card-icon">▶️</div><span class="tag">Video thực hành</span><h3>Hướng dẫn thao tác trên Excel</h3><p>Video sẽ giới thiệu tình huống, thao tác từng bước và kết quả cần đạt.</p><div class="links"><span>Video sẽ cập nhật</span></div></article>
+    <article class="card searchable" data-grade="all" data-keywords="video scratch lập trình"><div class="card-icon">🐱</div><span class="tag">Video lập trình</span><h3>Thực hành với Scratch</h3><p>Hướng dẫn xây dựng sản phẩm lập trình theo từng nhiệm vụ.</p><div class="links"><span>Video sẽ cập nhật</span></div></article>
+    <article class="card searchable" data-grade="all" data-keywords="video tin học kỹ năng máy tính"><div class="card-icon">🖥️</div><span class="tag">Video kỹ năng</span><h3>Kỹ năng sử dụng máy tính</h3><p>Các thao tác và kỹ năng cần thiết trong học tập.</p><div class="links"><span>Video sẽ cập nhật</span></div></article></div>
+  </section>
+
+  <section class="section" id="practice">
+    <div class="section-head"><h2>💻 Bài thực hành</h2><p>Mỗi bài gắn với một sản phẩm cụ thể</p></div>
+    <div class="cards"><article class="card searchable" data-grade="all" data-keywords="excel bảng tính dữ liệu định dạng"><div class="card-icon">📊</div><span class="tag">Bảng tính</span><h3>Thực hành tạo và trình bày bảng dữ liệu</h3><p>Quan sát sản phẩm mẫu, xác định yêu cầu rồi thực hiện từng bước.</p><div class="links"><span>Hướng dẫn sẽ cập nhật</span></div></article>
+    <article class="card searchable" data-grade="all" data-keywords="word văn bản trình bày"><div class="card-icon">📄</div><span class="tag">Soạn thảo</span><h3>Thực hành tạo văn bản</h3><p>Vận dụng kỹ năng soạn thảo để tạo một sản phẩm phục vụ học tập.</p><div class="links"><span>Hướng dẫn sẽ cập nhật</span></div></article>
+    <article class="card searchable" data-grade="all" data-keywords="scratch trò chơi lập trình"><div class="card-icon">🧩</div><span class="tag">Lập trình</span><h3>Thực hành tạo sản phẩm Scratch</h3><p>Từng bước xây dựng chương trình và kiểm tra hoạt động.</p><div class="links"><span>Hướng dẫn sẽ cập nhật</span></div></article></div>
+  </section>
+
+  <section class="section" id="documents">
+    <div class="section-head"><h2>📁 Tệp tài liệu</h2><p>Tài liệu mẫu sẽ được bổ sung theo từng bài</p></div>
+    <div class="cards"><article class="card searchable" data-grade="all" data-keywords="file excel bảng tính tải về"><div class="card-icon">📗</div><h3>File Excel thực hành</h3><p>Tệp dữ liệu để học sinh tải về và thực hiện theo video.</p><div class="links"><span>Chưa có tệp đính kèm</span></div></article>
+    <article class="card searchable" data-grade="all" data-keywords="phiếu học tập word pdf"><div class="card-icon">📝</div><h3>Phiếu học tập</h3><p>Phiếu giao nhiệm vụ và yêu cầu sản phẩm.</p><div class="links"><span>Chưa có tệp đính kèm</span></div></article>
+    <article class="card searchable" data-grade="all" data-keywords="tài liệu hướng dẫn pdf"><div class="card-icon">📘</div><h3>Tài liệu hướng dẫn</h3><p>Tài liệu tham khảo giúp học sinh ôn tập và thực hành.</p><div class="links"><span>Chưa có tệp đính kèm</span></div></article></div>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-head"><h2>📝 Ôn tập – Kiểm tra</h2><p>Luyện tập và củng cố kiến thức</p></div>
+    <div class="cards"><article class="card searchable" data-grade="all" data-keywords="trắc nghiệm câu hỏi ôn tập"><div class="card-icon">❓</div><h3>Câu hỏi trắc nghiệm</h3><p>Câu hỏi theo chủ đề, có thể bổ sung đáp án và giải thích.</p><div class="links"><span>Câu hỏi sẽ cập nhật</span></div></article>
+    <article class="card searchable" data-grade="all" data-keywords="bài kiểm tra tự đánh giá"><div class="card-icon">📋</div><h3>Bài kiểm tra trực tuyến</h3><p>Học sinh làm bài và xem kết quả sau khi hoàn thành.</p><div class="links"><span>Bài kiểm tra sẽ cập nhật</span></div></article>
+    <article class="card searchable" data-grade="all" data-keywords="bài tập vận dụng thực tế"><div class="card-icon">💡</div><h3>Bài tập vận dụng</h3><p>Nhiệm vụ mở rộng để áp dụng kiến thức vào tình huống thực tế.</p><div class="links"><span>Bài tập sẽ cập nhật</span></div></article></div>
+  </section>
+  <div class="note"><strong>💡 Cách học hiệu quả:</strong> Đọc tình huống và yêu cầu sản phẩm trước khi xem video. Trong lúc thực hành, em có thể tạm dừng video để làm theo. Sau đó, hãy thử thay đổi dữ liệu hoặc cách trình bày để tạo ra sản phẩm của riêng mình.</div>
+</main>
+<footer class="footer"><strong>🌸 GÓC TIN HỌC CÔ HIẾU</strong>Khám phá – Sáng tạo – Công nghệ<br>Kho học liệu phục vụ học tập và thực hành Tin học</footer>
+<script>
+let selectedGrade='all';
+const chips=document.querySelectorAll('.chip');
+chips.forEach(chip=>chip.addEventListener('click',()=>{chips.forEach(c=>c.classList.remove('active'));chip.classList.add('active');selectedGrade=chip.dataset.grade;applyFilters();}));
+function searchMaterials(){applyFilters();}
+function applyFilters(){const q=(document.getElementById('searchInput').value||'').trim().toLocaleLowerCase('vi');let shown=0;document.querySelectorAll('.searchable').forEach(item=>{const grade=item.dataset.grade||'all';const text=((item.innerText||'')+' '+(item.dataset.keywords||'')).toLocaleLowerCase('vi');const okGrade=selectedGrade==='all'||grade==='all'||grade===selectedGrade;const okText=!q||text.includes(q);item.style.display=okGrade&&okText?'':'none';if(okGrade&&okText)shown++;});let msg=document.getElementById('noResults');if(!msg){msg=document.createElement('p');msg.id='noResults';msg.className='empty';msg.textContent='Chưa tìm thấy học liệu phù hợp. Em hãy thử từ khóa khác nhé.';document.querySelector('.section').appendChild(msg);}msg.style.display=shown?'none':'block';}
+document.getElementById('searchInput').addEventListener('keydown',e=>{if(e.key==='Enter')searchMaterials();});
+</script>
+</body>
+</html>
